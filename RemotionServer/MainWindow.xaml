@@ -1,0 +1,211 @@
+﻿<Window x:Class="RemotionServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RemotionServer"
+		xmlns:cultural="clr-namespace:RemotionServer.Properties"
+        mc:Ignorable="d"
+		WindowStyle="None"
+        ResizeMode="NoResize"
+		AllowsTransparency="false"
+        Title="RemotionServer" Height="278.992" Width="529.758">
+    <Window.Resources>
+        <Brush x:Key="NewRetroWaveColor">#1C9100</Brush>
+        <ObjectDataProvider x:Key="UserSettingsCollection" ObjectType="{x:Type local:SettingsData}" MethodName="get_name_flag_dict"/>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"  BorderBrush="{DynamicResource NewRetroWaveColor}" BorderThickness="1" CornerRadius="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="#FF1B1B1B"></Setter>
+            <Setter Property="Foreground" Value="{DynamicResource NewRetroWaveColor}"></Setter>
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FontSize" Value="14px"></Setter>
+
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.1"
+                                                 Storyboard.TargetProperty="FontSize"
+                                                 To="15">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.1"
+                                                 Storyboard.TargetProperty="FontSize"
+                                                 To="14">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF232524"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="helpButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"  BorderBrush="#FFA200FF" BorderThickness="3" CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Background" Value="#FF1B1B1B"></Setter>
+            <Setter Property="Foreground" Value="#FFA200FF"></Setter>
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Content" Value="?"></Setter>
+            <Setter Property="FontWeight" Value="Heavy"></Setter>
+            <Setter Property="Height" Value="33"></Setter>
+            <Setter Property="Width" Value="33"></Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.1"
+                                                 Storyboard.TargetProperty="FontSize"
+                                                 To="15">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.1"
+                                                 Storyboard.TargetProperty="FontSize"
+                                                 To="14">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF232524"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="CloseConnectionButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Red" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="Red"></Setter>
+            <Setter Property="Background" Value="#FF1B1B1B"></Setter>
+            <Setter Property="Cursor" Value="Hand" />
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.1"
+                                                 Storyboard.TargetProperty="FontSize"
+                                                 To="13">
+                                </DoubleAnimation>
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.1"
+                                                 Storyboard.TargetProperty="FontSize"
+                                                 To="12">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF232524"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Border BorderThickness="1" BorderBrush="Black">
+        <Grid Background="#FF1B1B1B" MouseDown="Grid_MouseDown" Margin="0,0,0,-1">
+            <Image x:Name="background_jpg" Source="Resources/background.png" Stretch="Fill"/>
+            <Label x:Name="RemotionServerLabel" Content="Remotion server" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="10,0,0,0"/>
+            <Button x:Name="MinimizeButton" Style="{StaticResource buttonStyle}" Content="___" HorizontalAlignment="Left" Margin="194,4,0,0" VerticalAlignment="Top" Width="40" Height="21" Click="MinimizeButton_OnClick"/>
+            <Button x:Name="CloseApplicationButton" Style="{StaticResource CloseConnectionButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="239,4,0,0" VerticalAlignment="Top" Width="40" Height="21" Click="Exit_Click"/>
+            <TextBlock x:Name="AvailableIpAddressesTextBlock" Foreground="{StaticResource NewRetroWaveColor}"  HorizontalAlignment="Left" Margin="10,44,0,0" TextWrapping="Wrap" Text="{x:Static cultural:Resources.AvailableIpLabel}" VerticalAlignment="Top" FontSize="14"/>
+            <ListBox x:Name="IpListBox" HorizontalAlignment="Left" Background="{x:Null}" Height="116" Margin="10,68,0,0" VerticalAlignment="Top" Width="240" PreviewMouseDown="IpListBox_PreviewMouseDown">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding }" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <ToggleButton x:Name="OpenCloseConnectionToggleButton" Content="{x:Static cultural:Resources.OpenSocketButton}" Margin="10,189,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="240" Click="OpenCloseConnectionToggleButton_Click"></ToggleButton>
+            <Button x:Name="UpdateButton" Style="{StaticResource buttonStyle}" Content="{x:Static cultural:Resources.UpdateButton}" HorizontalAlignment="Left" Margin="165,41,0,0" VerticalAlignment="Top" Width="85" Height="22" Click="UpdateButton_Click"/>
+            <ToggleButton x:Name="ExpanderButton" Content="{x:Static cultural:Resources.SettingsTabHeader}" HorizontalAlignment="Left" Margin="188,134,-59,0" VerticalAlignment="Top" Width="160" Height="28" RenderTransformOrigin="0.5,0.5" Click="ExpanderButton_Click">
+                <ToggleButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ToggleButton.RenderTransform>
+            </ToggleButton>
+            <TextBlock x:Name="Shortcut1TextBlock" HorizontalAlignment="Left" Foreground="{StaticResource NewRetroWaveColor}"  Margin="304,7,0,0" TextWrapping="Wrap" Text="{x:Static cultural:Resources.FastButton1GroupBox}" VerticalAlignment="Top" FontSize="14" Width="213" Height="24"/>
+            <ComboBox x:Name="comboBox1" ItemsSource="{Binding Source={StaticResource UserSettingsCollection}}" SelectedValuePath="Value" DisplayMemberPath="Key" IsEditable="false" HorizontalAlignment="Left" Margin="304,33,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="combobox_SelectionChanged"/>
+            <TextBlock x:Name="Shortcut2TextBlock"  HorizontalAlignment="Left" Foreground="{StaticResource NewRetroWaveColor}" Margin="304,68,0,0" TextWrapping="Wrap" Text="{x:Static cultural:Resources.FastButton2GroupBox}" VerticalAlignment="Top" FontSize="14" Width="213" Height="24"/>
+            <ComboBox x:Name="comboBox2"  ItemsSource="{Binding Source={StaticResource UserSettingsCollection}}" SelectedValuePath="Value" DisplayMemberPath="Key" IsEditable="false" HorizontalAlignment="Left" Margin="304,92,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="combobox_SelectionChanged"/>
+            <TextBlock x:Name="ScrollSpeedLabel" FontSize="14" Foreground="{StaticResource NewRetroWaveColor}" Text="{x:Static cultural:Resources.ScrollSpeedLabel}" HorizontalAlignment="Left" Margin="304,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+            <Slider x:Name="ScrollSensSlider" IsMoveToPointEnabled="True" HorizontalAlignment="Left" Margin="304,151,0,0" VerticalAlignment="Top" Width="164" Minimum="15" Maximum="120" ValueChanged="ScrollSensSlider_ValueChanged"/>
+            <TextBlock x:Name="TouchpadSensLabel" FontSize="14" Foreground="{StaticResource NewRetroWaveColor}" HorizontalAlignment="Left" Margin="304,172,0,0" TextWrapping="Wrap" Text="{x:Static cultural:Resources.TouchpadSpeedLabel}" VerticalAlignment="Top" Width="203"/>
+            <Slider x:Name="TouchpadSensSlider" HorizontalAlignment="Left" Margin="304,196,0,0" VerticalAlignment="Top" Width="164" ValueChanged="TouchpadSensSlider_ValueChanged" Minimum="1"/>
+            <Label x:Name="ScrollingSensValueLabel" HorizontalAlignment="Left" Margin="473,146,0,0" VerticalAlignment="Top" Width="34" FontSize="14"/>
+            <Label x:Name="TouchpadSensValueLabel" HorizontalAlignment="Left" Margin="473,189,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBlock x:Name="DebugMessageTextBlock" Foreground="{StaticResource NewRetroWaveColor}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,234,0,0" VerticalAlignment="Top" Height="36" Width="274">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Style.Triggers>
+                            <EventTrigger RoutedEvent="TextInput">
+                                <BeginStoryboard>
+                                    <Storyboard TargetProperty="Opacity" Duration="00:00:01">
+                                        <DoubleAnimation From="0" To="1" Duration="00:00:01"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+    </Border>
+</Window>
