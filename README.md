@@ -26,6 +26,9 @@ To change screen orientation press 1 and 2 buttons at the same time.
 Download client on your android device
 [Coming soon]
 
+Wpf templates design provided by Infragistics free dark metro theme
+http://www.infragistics.com/community/blogs/blagunas/archive/2013/05/25/free-metro-light-and-dark-themes-for-wpf-and-silverlight-microsoft-controls.aspx
+Android design by Kolesnikov A.S
 
 #RU
 Это простое приложение позволяет управлять компьютером на расстоянии по локальной сети, превращая ваше android-устройство в тачпад,
@@ -51,3 +54,8 @@ Download client on your android device
 
 Ссылка для скачивания Remotion для андроид
 [Скоро будет]
+
+Дизайн WPF элементов предоставлен Infragistics free dark metro theme
+http://www.infragistics.com/community/blogs/blagunas/archive/2013/05/25/free-metro-light-and-dark-themes-for-wpf-and-silverlight-microsoft-controls.aspx
+
+Андроид дизайн создан Колесниковым А.С
