@@ -1,5 +1,6 @@
 # RemotionServer
 Free touchpad server for RemotionClient. Just install it on your PC (check Release to get installer)
+Тачпад! Управляй компьютером со своего андроид-устройства.
 
 #EN
 This application allow you manage your computer from a distance, like notebook touchpad, using private network.
