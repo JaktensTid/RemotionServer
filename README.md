@@ -1,5 +1,6 @@
 # RemotionServer
 Free touchpad server for RemotionClient. Just install it on your PC (check Release to get installer)
+
 Тачпад! Управляй компьютером со своего андроид-устройства.
 
 #EN
@@ -28,6 +29,7 @@ Download client on your android device
 
 Wpf templates design provided by Infragistics free dark metro theme
 http://www.infragistics.com/community/blogs/blagunas/archive/2013/05/25/free-metro-light-and-dark-themes-for-wpf-and-silverlight-microsoft-controls.aspx
+
 Android design by Kolesnikov A.S
 
 #RU
