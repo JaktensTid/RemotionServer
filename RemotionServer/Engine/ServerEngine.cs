@@ -24,7 +24,7 @@ namespace Engine
         public static bool errorOccured;
         //Singleton
         private static ServerEngine serverEngine;
-        public static double touchpadSens;
+        //public static double touchpadSens;
         /// <summary>
         /// Лист доступных IP адресов компьютера
         /// </summary>
@@ -117,7 +117,8 @@ namespace Engine
                             string[] axis = data.Split(':');
                             int dx = Convert.ToInt32(axis[0]);
                             int dy = Convert.ToInt32(axis[1]);
-                            mouse_event(0x0001, (int)(dx * touchpadSens), (int)(dy * touchpadSens), 0, 0);
+                            //mouse_event(0x0001, (int)(dx * touchpadSens), (int)(dy * touchpadSens), 0, 0);
+                            mouse_event(0x0001, dx, dy, 0, 0);
                         }
                         else
                             invoker.Invoke(data, command);

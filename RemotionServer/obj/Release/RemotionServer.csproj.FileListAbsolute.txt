@@ -24,3 +24,4 @@ C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServ
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.Properties.Resources.resources
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\ru\RemotionServer.resources.dll
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.exe
+C:\Users\Andre\Documents\Visual Studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.csprojResolveAssemblyReference.cache

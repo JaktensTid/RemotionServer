@@ -49,6 +49,7 @@ namespace RemotionServer
 
         public MainWindow()
         {
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
             InitializeComponent();
             UpdateNetworkInfo();
             notifyIconBaloonCanShow = true;
@@ -184,7 +185,7 @@ namespace RemotionServer
         private void TouchpadSensSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             double nextValue = TouchpadSensSlider.Value;
-            ServerEngine.touchpadSens = nextValue;
+            //ServerEngine.touchpadSens = nextValue;
             if (TouchpadSensValueLabel != null)
                 TouchpadSensValueLabel.Content = $"{nextValue:0.0}";
         }
@@ -307,9 +308,9 @@ namespace RemotionServer
             ScrollSensSlider.Visibility = visibility;
             ScrollingSensValueLabel.Visibility = visibility;
 
-            TouchpadSensLabel.Visibility = visibility;
-            TouchpadSensSlider.Visibility = visibility;
-            TouchpadSensValueLabel.Visibility = visibility;
+            //TouchpadSensLabel.Visibility = visibility;
+            //TouchpadSensSlider.Visibility = visibility;
+            //TouchpadSensValueLabel.Visibility = visibility;
         }
         #endregion
 

@@ -187,10 +187,10 @@
             <ComboBox x:Name="comboBox2"  ItemsSource="{Binding Source={StaticResource UserSettingsCollection}}" SelectedValuePath="Value" DisplayMemberPath="Key" IsEditable="false" HorizontalAlignment="Left" Margin="304,92,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="combobox_SelectionChanged"/>
             <TextBlock x:Name="ScrollSpeedLabel" FontSize="14" Foreground="{StaticResource NewRetroWaveColor}" Text="{x:Static cultural:Resources.ScrollSpeedLabel}" HorizontalAlignment="Left" Margin="304,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
             <Slider x:Name="ScrollSensSlider" IsMoveToPointEnabled="True" HorizontalAlignment="Left" Margin="304,151,0,0" VerticalAlignment="Top" Width="164" Minimum="15" Maximum="120" ValueChanged="ScrollSensSlider_ValueChanged"/>
-            <TextBlock x:Name="TouchpadSensLabel" FontSize="14" Foreground="{StaticResource NewRetroWaveColor}" HorizontalAlignment="Left" Margin="304,172,0,0" TextWrapping="Wrap" Text="{x:Static cultural:Resources.TouchpadSpeedLabel}" VerticalAlignment="Top" Width="203"/>
-            <Slider x:Name="TouchpadSensSlider" HorizontalAlignment="Left" Margin="304,196,0,0" VerticalAlignment="Top" Width="164" ValueChanged="TouchpadSensSlider_ValueChanged" Minimum="1"/>
+            <TextBlock x:Name="TouchpadSensLabel" FontSize="14" Visibility="Collapsed" Foreground="{StaticResource NewRetroWaveColor}" HorizontalAlignment="Left" Margin="304,172,0,0" TextWrapping="Wrap" Text="{x:Static cultural:Resources.TouchpadSpeedLabel}" VerticalAlignment="Top" Width="203"/>
+            <Slider x:Name="TouchpadSensSlider" Visibility="Collapsed" HorizontalAlignment="Left" Margin="304,196,0,0" VerticalAlignment="Top" Width="164" ValueChanged="TouchpadSensSlider_ValueChanged" Minimum="1"/>
             <Label x:Name="ScrollingSensValueLabel" HorizontalAlignment="Left" Margin="473,146,0,0" VerticalAlignment="Top" Width="34" FontSize="14"/>
-            <Label x:Name="TouchpadSensValueLabel" HorizontalAlignment="Left" Margin="473,189,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label x:Name="TouchpadSensValueLabel" Visibility="Collapsed" HorizontalAlignment="Left" Margin="473,189,0,0" VerticalAlignment="Top" FontSize="14"/>
             <TextBlock x:Name="DebugMessageTextBlock" Foreground="{StaticResource NewRetroWaveColor}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,234,0,0" VerticalAlignment="Top" Height="36" Width="274">
                 <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">
