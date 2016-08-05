@@ -4,7 +4,7 @@ Free touchpad server for RemotionClient. Just install it on your PC (check Relea
 Тачпад! Управляй компьютером со своего андроид-устройства.
 
 #EN
-This application allow you to manage your computer from a distance, like notebook touchpad, using private network.
+This application allows you to manage your computer from a distance, like notebook touchpad, using private network.
 Just install Remotion on your android-device (download link below), install RemotionServer on your computer and everything is prepared!
 Also application provides you text messages functionality and shortcuts for PC, like
 
