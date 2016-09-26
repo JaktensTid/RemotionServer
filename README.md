@@ -25,7 +25,7 @@ Also application provides you text messages functionality and shortcuts for PC, 
 To change screen orientation press 1 and 2 buttons at the same time.
 
 Download client on your android device
-[Coming soon]
+https://play.google.com/store/apps/details?id=bia.jaktenstid.remotionclient&hl=ru
 
 Wpf templates design provided by Infragistics free dark metro theme
 http://www.infragistics.com/community/blogs/blagunas/archive/2013/05/25/free-metro-light-and-dark-themes-for-wpf-and-silverlight-microsoft-controls.aspx
@@ -55,7 +55,7 @@ Android design by Kolesnikov A.S
 Приложение поддерживает разные ориентации экрана, для смены ориентации в приложении одновременно нажмите кнопки 1 и 2.
 
 Ссылка для скачивания Remotion для андроид
-[Скоро будет]
+https://play.google.com/store/apps/details?id=bia.jaktenstid.remotionclient&hl=ru
 
 Дизайн WPF элементов предоставлен Infragistics free dark metro theme
 http://www.infragistics.com/community/blogs/blagunas/archive/2013/05/25/free-metro-light-and-dark-themes-for-wpf-and-silverlight-microsoft-controls.aspx
