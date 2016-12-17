@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemotionServer", "RemotionS
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{C5E29105-5E1F-404A-8063-9CA91594DED8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginAdapter", "PluginAdapter\PluginAdapter.csproj", "{038EEA7C-D312-43AC-B664-FB6B8217733A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3451AC32-835F-4755-B345-C0A487D57AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5E29105-5E1F-404A-8063-9CA91594DED8}.Debug|Any CPU.ActiveCfg = Debug
 		{C5E29105-5E1F-404A-8063-9CA91594DED8}.Release|Any CPU.ActiveCfg = Release
+		{038EEA7C-D312-43AC-B664-FB6B8217733A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038EEA7C-D312-43AC-B664-FB6B8217733A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038EEA7C-D312-43AC-B664-FB6B8217733A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038EEA7C-D312-43AC-B664-FB6B8217733A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

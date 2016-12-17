@@ -25,3 +25,30 @@ C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServ
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\ru\RemotionServer.resources.dll
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.exe
 C:\Users\Andre\Documents\Visual Studio 2015\Projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.csprojResolveAssemblyReference.cache
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\RemotionServer.exe.config
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\RemotionServer.exe
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\RemotionServer.pdb
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\ru\RemotionServer.resources.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\System.Windows.Controls.Input.Toolkit.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\System.Windows.Controls.Layout.Toolkit.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Release\WPFToolkit.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\Themes\MetroDark\MetroDark.MSControls.Core.Implicit.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\Themes\MetroDark\MetroDark.MSControls.Toolkit.Implicit.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\Themes\MetroDark\Styles.Shared.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\Themes\MetroDark\Styles.WPF.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\Themes\MetroDark\Theme.Colors.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\MainWindow.g.cs
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\App.g.cs
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer_MarkupCompile.cache
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer_MarkupCompile.lref
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\App.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\MainWindow.baml
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.g.resources
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.Properties.Resources.resources
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.Properties.Resources.ru.resources
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.csproj.GenerateResource.Cache
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\ru\RemotionServer.resources.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.exe
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.pdb
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\obj\Release\RemotionServer.csprojResolveAssemblyReference.cache

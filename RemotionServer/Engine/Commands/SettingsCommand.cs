@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Windows;
 using Engine;
 using RemotionServer.Properties;
+using System.Reflection;
+using System.IO;
+using PluginAdapter;
 
 namespace RemotionServer.Engine.Commands
 {
@@ -11,6 +15,9 @@ namespace RemotionServer.Engine.Commands
     /// </summary>
     internal class SettingsCommand : ICommand
     {
+
+        private static List<IPlugin> plugins;
+
         public const int TURN_OFF_SOUND = 1;
         public const int MIMIMIZE_ALL = 2;
         public const int CLOSE_ACTIVE_WINDOW = 4;
@@ -31,6 +38,23 @@ namespace RemotionServer.Engine.Commands
 
         static SettingsCommand()
         {
+            plugins = new List<IPlugin>();
+            //Load plugins
+            List<Assembly> assemblies = new List<Assembly>();
+            foreach (var dll in Directory.GetFiles(@".\Plugins", "*.dll"))
+            {
+                Assembly assembly = Assembly.LoadFrom(dll);
+                foreach (var type in assembly.GetTypes())
+                {
+                    if (type.GetInterfaces().Contains(typeof(IPlugin)))
+                    {
+                        IPlugin plugin = Activator.CreateInstance(type) as IPlugin;
+                        plugins.Add(plugin);
+                    }
+                }
+
+            }
+            //------------
             _action1 = action1;
             _action2 = action2;
         }
@@ -91,7 +115,7 @@ namespace RemotionServer.Engine.Commands
         {
             get
             {
-                return new Dictionary<string, int>
+                Dictionary<string, int> dictionary = new Dictionary<string, int>
                 {
                     { Resources.TurnOffSoundMenu, TURN_OFF_SOUND },
                     { Resources.MinimizeAllMenu, MIMIMIZE_ALL },
@@ -111,6 +135,19 @@ namespace RemotionServer.Engine.Commands
                     { Resources.ScrollDownMenu, SCROLLDOWN },
                     { Resources.NothingMenu, NOTHING }
                 };
+
+                int commandHighest = 19;
+                foreach (var plugin in plugins)
+                {
+                    foreach (var action in plugin.Actions)
+                    {
+                        dictionary.Add(action.Name, action.Flag + commandHighest);
+                    }
+
+                    commandHighest = plugin.Actions[plugin.Actions.Count - 1].Flag;
+                }
+
+                return dictionary;
             }
         }
         /// <summary>
@@ -120,7 +157,7 @@ namespace RemotionServer.Engine.Commands
         {
             get
             {
-                return new Dictionary<int, string>
+                Dictionary<int, string> dictionary = new Dictionary<int, string>
                 {
                     {TURN_OFF_SOUND, Resources.TurnOffSoundMenu  },
                     {MIMIMIZE_ALL, Resources.MinimizeAllMenu  },
@@ -140,6 +177,19 @@ namespace RemotionServer.Engine.Commands
                     {SCROLLDOWN, Resources.ScrollDownMenu },
                     {NOTHING, Resources.NothingMenu }
                 };
+
+                int commandHighest = 19;
+                foreach (var plugin in plugins)
+                {
+                    foreach (var action in plugin.Actions)
+                    {
+                        dictionary.Add(action.Flag + commandHighest, action.Name);
+                    }
+
+                    commandHighest = plugin.Actions[plugin.Actions.Count - 1].Flag;
+                }
+
+                return dictionary;
             }
         }
         /// <summary>
@@ -149,7 +199,7 @@ namespace RemotionServer.Engine.Commands
         {
             get
             {
-                return new Dictionary<int, Action>
+                Dictionary<int, Action> dictionary = new Dictionary<int, Action>()
                 {
                     { TURN_OFF_SOUND,ControllerEngine.Mute },
                     { MIMIMIZE_ALL, ControllerEngine.MinimizeAll},
@@ -161,14 +211,27 @@ namespace RemotionServer.Engine.Commands
                     { COPY_SELECTION,  ControllerEngine.CopySelection},
                     { PASTE, ControllerEngine.Paste },
                     { CUT, ControllerEngine.Cut},
-                    {VOLUMEUP, ControllerEngine.VolUp  },
-                    {VOLUMEDOWN, ControllerEngine.VolDown },
-                    {ZOOMIN, ControllerEngine.ZoomIn },
-                    {ZOOMOUT, ControllerEngine.ZoomOut },
-                    {SCROLLUP, ControllerEngine.MouseWheelUp },
-                    {SCROLLDOWN, ControllerEngine.MouseWheelDown },
+                    { VOLUMEUP, ControllerEngine.VolUp  },
+                    { VOLUMEDOWN, ControllerEngine.VolDown },
+                    { ZOOMIN, ControllerEngine.ZoomIn },
+                    { ZOOMOUT, ControllerEngine.ZoomOut },
+                    { SCROLLUP, ControllerEngine.MouseWheelUp },
+                    { SCROLLDOWN, ControllerEngine.MouseWheelDown },
                     { NOTHING, ()=> { } }
                 };
+
+                int commandHighest = 19;
+                foreach(var plugin in plugins)
+                {
+                    foreach(var action in plugin.Actions)
+                    {
+                        dictionary.Add(action.Flag + commandHighest, action.Action);
+                    }
+
+                    commandHighest = plugin.Actions[plugin.Actions.Count - 1].Flag;
+                }
+
+                return dictionary;
             }
         }
 

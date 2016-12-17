@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RemotionServer.Engine.Commands
 {
-    interface ICommand
+    public interface ICommand
     {
         void Execute(string parameter);
     }

@@ -1,0 +1,5 @@
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\bin\Release\PluginAdapter.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\bin\Release\PluginAdapter.pdb
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\obj\Release\PluginAdapter.csprojResolveAssemblyReference.cache
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\obj\Release\PluginAdapter.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\obj\Release\PluginAdapter.pdb

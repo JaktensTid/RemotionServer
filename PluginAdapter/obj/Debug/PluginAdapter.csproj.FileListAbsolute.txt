@@ -1,0 +1,4 @@
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\bin\Debug\PluginAdapter.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\bin\Debug\PluginAdapter.pdb
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\obj\Debug\PluginAdapter.dll
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\PluginAdapter\obj\Debug\PluginAdapter.pdb
