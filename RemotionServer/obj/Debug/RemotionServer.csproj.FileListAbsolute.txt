@@ -25,3 +25,4 @@ C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServ
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Debug\RemotionServer.exe
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Debug\RemotionServer.pdb
 C:\Users\Andre\documents\visual studio 2015\Projects\RemotionServer\RemotionServer\obj\Debug\RemotionServer.csprojResolveAssemblyReference.cache
+E:\Program Files (x86)\Visual Studio projects\RemotionServer\RemotionServer\bin\Debug\RemotionServer.exe.config
